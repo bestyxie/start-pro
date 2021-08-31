@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --config webpackConfig/webpack.config.js --mode=development",
     "start:enterprise": "webpack serve --config webpackConfig/enterprise.webpack.config.js --mode=development",
-    "build": "rm -rf dist/ && webpack --mode=production",
+    "build": "rm -rf dist/ && webpack --config webpackConfig/webpack.config.js --mode=production",
     "eslint": "eslint scrm/**"
   },
   "dependencies": {
@@ -41,6 +41,7 @@
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "typescript": "^4.4.2",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0",
     "webpack-merge": "^5.8.0"

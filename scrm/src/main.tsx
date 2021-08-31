@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Button } from 'antd'
+import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import routes from './routes'
 
-const App: React.FC = () => {
-  return (
-    <div>
-      <Button type="primary">Hello</Button>
-    </div>
-  )
-};
+class App extends React.Component {
+  render(): React.ReactNode {
+    return (
+      <Suspense fallback={() => <span>loading</span>}>
+        <Router>
+          <Switch>
+            {
+              routes.map(r => {
+                const PageComponent = r.component
+                return (
+                  <Route key={r.path} path={r.path}>
+                    <PageComponent />
+                  </Route>
+                )
+              })
+            }
+          </Switch>
+        </Router>
+      </Suspense>
+    )
+  }
+}
 
 export default App
