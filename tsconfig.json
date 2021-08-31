@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "experimentalDecorators": true
+  },
+  "include": ["./**/*"],
+  "exclude": [ "dist" ]
+}
