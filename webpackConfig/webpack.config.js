@@ -7,11 +7,12 @@ module.exports = function(env, args) {
 
   return merge(commonConfig, {
     entry: {
-      scrm: './scrm/index.tsx'
+      scrm: './scrm/index.tsx',
     },
     output: {
-      filename: '[name].[hash].js',
+      filename: '[name].[hash:4].js',
       path: path.resolve(__dirname, 'dist'),
+      chunkFilename: '[name].[chunkhash:4].js',
     },
     devServer: {
       port: 8000,

@@ -7,7 +7,7 @@ module.exports = function(env, args) {
 
   return merge(commonConfig, {
     entry: {
-      enterprise: './enterprise/index.tsx'
+      enterprise: './subProject/enterprise/index.tsx',
     },
     output: {
       filename: '[name].[hash].js',

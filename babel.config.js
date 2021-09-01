@@ -5,6 +5,6 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    ['import', { libraryName: 'antd', libraryDirectory: 'lib', style: true}]
-  ]
+    ['import', {libraryName: 'antd', libraryDirectory: 'lib', style: true}],
+  ],
 }
